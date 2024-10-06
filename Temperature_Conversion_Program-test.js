@@ -19,7 +19,13 @@ function convert() {
     } 
     else if (CelsiustoKelvin.checked){
         temp = Number(textBox.value);
-        temp = temp + 273;
+        temp += 273;
+        result.textContent = temp.toFixed(1) + "K";
+    }
+    else if (FahrenheittoKelvin.checked){
+        temp = Number(textBox.value);
+        temp = (temp - 32) * 5 / 9;
+        temp += 273
         result.textContent = temp.toFixed(1) + "K";
     }
     else {
